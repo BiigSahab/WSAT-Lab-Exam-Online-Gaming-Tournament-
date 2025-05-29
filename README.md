@@ -1,84 +1,51 @@
 # Gaming Tournament Registration System
 
-## Overview
-This project is an online gaming tournament registration system built using the MERN stack (MongoDB, Express, React, Node.js). It allows users to register for competitive esports tournaments, view tournament details, and manage their team registrations.
+## Backend Documentation
 
-## Features
-- User registration for tournaments
-- View tournament details
-- Manage team registrations
-- RESTful API for tournament operations
+### Overview
+This backend service is built using Node.js and Express, and it serves as the API for the Gaming Tournament Registration System. It allows users to register for esports tournaments, view tournament details, and manage their team registrations.
 
-## Project Structure
-```
-gaming-tournament-registration
-├── backend
-│   ├── src
-│   │   ├── controllers
-│   │   │   └── tournamentController.js
-│   │   ├── models
-│   │   │   └── Tournament.js
-│   │   ├── routes
-│   │   │   └── tournamentRoutes.js
-│   │   ├── app.js
-│   │   └── config
-│   │       └── db.js
-│   ├── package.json
-│   └── README.md
-├── frontend
-│   ├── src
-│   │   ├── components
-│   │   │   ├── TournamentList.jsx
-│   │   │   ├── RegistrationForm.jsx
-│   │   │   └── TeamManagement.jsx
-│   │   ├── pages
-│   │   │   ├── Home.jsx
-│   │   │   └── TournamentDetails.jsx
-│   │   ├── App.jsx
-│   │   └── index.js
-│   ├── package.json
-│   └── README.md
-└── README.md
-```
+### Setup Instructions
 
-## Getting Started
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd gaming-tournament-registration/backend
+   ```
 
-### Prerequisites
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure the database**
+   - Update the database connection settings in `src/config/db.js` to match your MongoDB setup.
+
+4. **Run the application**
+   ```bash
+   npm start
+   ```
+
+### API Endpoints
+
+- **GET /api/tournaments**: Retrieve a list of all tournaments.
+- **GET /api/tournaments/:id**: Retrieve details of a specific tournament by ID.
+- **POST /api/tournaments**: Create a new tournament.
+- **PUT /api/tournaments/:id**: Update an existing tournament by ID.
+- **DELETE /api/tournaments/:id**: Delete a tournament by ID.
+
+### Technologies Used
 - Node.js
+- Express
+- Mongoose
 - MongoDB
 
-### Backend Setup
-1. Navigate to the `backend` directory.
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Set up your MongoDB connection in `backend/src/config/db.js`.
-4. Start the server:
-   ```
-   npm start
-   ```
-
-### Frontend Setup
-1. Navigate to the `frontend` directory.
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the React application:
-   ```
-   npm start
-   ```
-
-## API Endpoints
-- **GET /api/tournaments**: Retrieve a list of tournaments.
-- **POST /api/tournaments**: Create a new tournament.
-- **GET /api/tournaments/:id**: Retrieve details of a specific tournament.
-- **PUT /api/tournaments/:id**: Update a tournament.
-- **DELETE /api/tournaments/:id**: Delete a tournament.
-
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features.
-
-## License
-This project is licensed under the MIT License.
+### Folder Structure
+- **src**: Contains the main application code.
+  - **controllers**: Contains the logic for handling requests.
+  - **models**: Contains the Mongoose models.
+  - **routes**: Contains the API route definitions.
+  - **config**: Contains configuration files, including database connection.
+  
+### Contribution
+Feel free to contribute to this project by submitting issues or pull requests.
